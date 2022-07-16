@@ -17,7 +17,7 @@ def say_hello():
 
 #动态URL
 @app.route('/greet/<name>')
-@ap.route('/greet',defaults={'name':'Programmer'})
+@app.route('/greet',defaults={'name':'Programmer'})
 def greet(name):
     return '<h1>Hello,%s!</h1>' % name
 
