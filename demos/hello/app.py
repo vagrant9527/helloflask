@@ -1,5 +1,5 @@
-from flask import Flask
-
+from flask import Flask,url_for
+import click
 app=Flask(__name__)
 #从flask包导入Flask类
 #实例化这个类，就得到程序实例app
@@ -21,3 +21,8 @@ def say_hello():
 def greet(name):
     return '<h1>Hello,%s!</h1>' % name
 
+#创建自定义命令
+@app.cli.command()
+def hello():
+    # click.echo('Hello,Human!')
+    print('Hello,Human!!')
